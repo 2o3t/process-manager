@@ -2,15 +2,12 @@
 
 const PM = require('../');
 const client = new PM.Client(__dirname + '/sub-processes.js');
-const channel = client.getChannel('abc');
-channel.call('ccd', 789).then(data => {
+const channel = client.getChannel('channelName');
+channel.call('info', {
+    // something
+}).then(data => {
     console.log('data', data);
 });
-setInterval(() => {
-    channel.call('ccd', 'info').then(data => {
-        console.log('info: ', data);
-    });
-}, 2000);
 channel.listen('ccc')(aa => {
     console.log('listen..', aa);
 });

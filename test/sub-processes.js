@@ -14,10 +14,9 @@
 const PM = require('../');
 const server = new PM.Server();
 const channel = new PM.ServerChannel({
-    ccd(arg) {
+    info(arg) {
         console.log('arg: ', arg);
-        if (arg === 'info') return Promise.resolve(server.info);
-        return Promise.resolve(arg);
+        return Promise.resolve(server.info);
     },
     ccc(emit) {
         emit('100w');
@@ -29,4 +28,4 @@ const channel = new PM.ServerChannel({
     },
 });
 console.log('server ok');
-server.registerChannel('abc', channel);
+server.registerChannel('channelName', channel);
