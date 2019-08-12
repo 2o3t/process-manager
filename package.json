@@ -1,0 +1,18 @@
+{
+  "name": "@2o3t/process-manager",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zyao89 <zyao89@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+      "eslint": "^5.16.0",
+      "eslint-config-2o3t": "^1.1.15"
+  }
+}
